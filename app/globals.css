@@ -1,0 +1,14 @@
+/* Global CSS for Syntropy Next.js App */
+/* Note: Main styling is in css/style.css for the static HTML site */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+

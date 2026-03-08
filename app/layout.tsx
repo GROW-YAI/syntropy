@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import "./globals.css";
 import Navbar from "./components/features/navbar";
 import Footer from "./components/features/footer";
 import BoafoWidgetInitializer from "./components/BoafoWidgetInitializer";
-import React = require("react");
+import React from "react";
 
 export const metadata: Metadata = {
-		title: "My Website",
-		description: "Accessibility powered by Boafo",
+		title: "Syntropy Engineering Solutions",
+		description: "Expert welding and metal fabrication services in Ghana",
 };
 
 export default function RootLayout({
 		children,
 }: {
-		children: React.ReactNode;
+		children: ReactNode;
 }) {
 		return (
 				<html lang="en">

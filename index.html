@@ -3,197 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syntropy Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat&family=Poppins:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./css/style.css">
-<link rel="stylesheet" href="./css/swiper.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Syntropy Engineering Solutions</title>
+    <meta name="description" content="Expert welding and metal fabrication services in Ghana">
+    <meta name="keywords" content="welding, metal fabrication, engineering services, Ghana">
+    <meta name="author" content="Syntropy Engineering Solutions">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="./css/style.css" as="style">
+    <link rel="preload" href="./css/swiper.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/performance.css">
+    <link rel="stylesheet" href="./css/swiper.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/synlogo.png" type="image/x-icon">
 </head>
 <body>
-        <nav id="navbar" class="fixed-navbar">
-            <img src="./assets/Syntropi-Eng-logo.webp" alt="logo" id="logo" height="100">
-            <div id="nav-links">
-                <span><a href="#home">Home</a></span>
-                <span><a href="#about">About Us</a></span>
-                <span><a href="#services">Services</a></span>
-                <span><a href="#team">Our Team</a></span>
-                <span><a href="#testimonials">Testimonials</a></span>
-                <span><a href="#contact">Contact Us</a></span>
+    
+    <header role="banner">
+        <nav id="navbar" class="fixed-navbar" role="navigation" aria-label="Main navigation">
+            <div class="logo-container">
+                <img src="./assets/Syntrop_bg.png" alt="Syntropy Engineering Solutions Logo" id="logo" height="50" width="60">
             </div>
-             <!-- Hamburger Menu Icon -->
-  <div id="hamburger-menu" class="hamburger-menu" onclick="toggleMenu()">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-        </nav>        
-        <section id="home">
+            <div id="nav-links" role="menubar">
+                <span role="menuitem"><a href="#home" aria-label="Go to Home section">Home</a></span>
+                <span role="menuitem"><a href="#about" aria-label="Go to About Us section">About Us</a></span>
+                <span role="menuitem"><a href="#services" aria-label="Go to Services section">Services</a></span>
+                <span role="menuitem"><a href="#team" aria-label="Go to Our Team section">Our Team</a></span>
+                <span role="menuitem"><a href="#testimonials" aria-label="Go to Testimonials section">Testimonials</a></span>
+                <span role="menuitem"><a href="#contact" aria-label="Go to Contact Us section">Contact Us</a></span>
+            </div>
+            <!-- Hamburger Menu Icon -->
+            <button id="hamburger-menu" class="hamburger-menu" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+        </nav>
+    </header>
+        
+    <main id="main-content">
+        <section id="home" class="hero-section" aria-label="Welcome section">
+            <picture>
+                <source srcset="./assets/welder-hero-mobile.jpg" media="(max-width: 768px)">
+                <img src="https://i.ibb.co/zVCdvwMV/welder-5408909-1280.jpg" alt="Professional welder working on metal fabrication" id="hero-bg">
+            </picture>
             <div id="hero-overlay">
-                <header>
-                    <span id="subtext2" class="poppins-bold">WELCOME</span>
-                    <span id="subtext1" class="courgette-regular">We Are Here To Build Your Dream</span>
-                </header>
-                <a href="#contact"><button class="get-button">Get In Touch</button></a>
+                <div class="hero-content">
+                    <h1 id="subtext2" class="poppins-bold">WELCOME</h1>
+                    <h2 id="subtext1" class="courgette-regular">We Are Here To Build Your Dream</h2>
+                    <a href="#contact" aria-label="Get in touch with us">
+                        <button class="get-button" aria-label="Contact us for services">Get In Touch</button>
+                    </a>
+                </div>
             </div>
         </section>
-    <section id="about">
-        <img id="aboutimage" src="./assets/syn7.jpeg" alt="About Us Image">
-        <div id="about-text">
+    <section id="about" class="about-section" aria-label="About our company">
+        <div class="about-content">
             <div class="sub-header">
-            <!-- <span class="courgette-regular" id="abouttext1">Syntropy</span> -->
-            <span class="poppins-bold" id="abouttext2">About Us</span>
+                <h2 class="poppins-bold" id="abouttext2">About Us</h2>
             </div>
-            <p class="aboutdescription">
-                With cutting-edge machinery and extensive industry expertise, SES proudly stands out as one of Africa's best. We specialize in producing heavy-duty machinery parts for the mining, construction, timber, and agricultural industries, alongside expert welding and metal fabrication services. Additionally, we are committed to training artisans and have constructed a cupola furnace to recycle unused scrap metals efficiently.
-                <p class="aboutdescription">At SES, our vision is to become the leading local authority in welding and metal fabrication. We prioritize uncompromising quality in our products and services, ensuring excellence in every aspect of our work.
-
-                    We foster a respectful, safe, and conducive environment for our team, firmly believing that success is built through collaboration. <br>At SES, we live by the principle that "Together Everyone Achieves More (TEAM).</p>
-            </p>
+            <div class="about-text">
+                <p class="aboutdescription">
+                    With cutting-edge machinery and extensive industry expertise, SES proudly stands out as one of Africa's best. We specialize in producing heavy-duty machinery parts for the mining, construction, timber, and agricultural industries, alongside expert welding and metal fabrication services. Additionally, we are committed to training artisans and have constructed a cupola furnace to recycle unused scrap metals efficiently.
+                </p>
+                <p class="aboutdescription">
+                    At SES, our vision is to become the leading local authority in welding and metal fabrication. We prioritize uncompromising quality in our products and services, ensuring excellence in every aspect of our work.
+                </p>
+                <p class="aboutdescription">
+                    We foster a respectful, safe, and conducive environment for our team, firmly believing that success is built through collaboration. At SES, we live by the principle that "Together Everyone Achieves More (TEAM)."
+                </p>
+            </div>
+        </div>
+        <div class="about-image">
+            <img id="aboutimage" src="./assets/syn7.jpeg" alt="Syntropy Engineering Solutions team working on metal fabrication projects" loading="lazy">
         </div>
     </section>
-       <section id="services">
-        <div class="sub-header1">
-            <span class="courgette-regular">Discover</span>
-            <span class="poppins-bold">OUR OFFERS</span>
+    <section id="services" class="services-section" aria-label="Our services">
+        <div class="services-header">
+            <h2 class="courgette-regular">Discover</h2>
+            <h3 class="poppins-bold">OUR SERVICES</h3>
         </div>
-        <div id="blogcards">
-            <div class="cardhome">
-                <img class="cardimg" src="./assets/syn1.jpeg" alt="">
+        <div class="services-grid" role="list">
+            <article class="service-card" role="listitem">
+                <img class="cardimg" src="./assets/syn1.jpeg" alt="Agricultural welding equipment" loading="lazy">
                 <div class="cardtext">
-                    <p class="phead">AGRICULTURAL WELDING</p>
+                    <h4 class="phead">AGRICULTURAL WELDING</h4>
                     <p>We provide welding services tailored to the agricultural sector, repairing and fabricating equipment to keep your farm operations running smoothly. Our solutions are durable and designed to withstand tough conditions.</p>
                 </div>
-            </div>
-            <div class="cardhome">
-                <img class="cardimg" src="./assets/syn2.jpeg" alt="">
+            </article>
+            <article class="service-card" role="listitem">
+                <img class="cardimg" src="./assets/syn2.jpeg" alt="Structural welding on building framework" loading="lazy">
                 <div class="cardtext">
-                    <p class="phead">STRUCTURAL WELDING</p>
+                    <h4 class="phead">STRUCTURAL WELDING</h4>
                     <p>Our structural welding services focus on creating strong and reliable frameworks for buildings and infrastructure. We ensure precision and adherence to safety standards in every project.</p>
                 </div>
-            </div>
-            <div class="cardhome">
-                <img class="cardimg" src="./assets/syn3.jpeg" alt="">
+            </article>
+            <article class="service-card" role="listitem">
+                <img class="cardimg" src="./assets/syn3.jpeg" alt="Welding training session" loading="lazy">
                 <div class="cardtext">
-                    <p class="phead">TRAINING SERVICES</p>
+                    <h4 class="phead">TRAINING SERVICES</h4>
                     <p>Enhance your skills with our professional welding training programs. Our experienced instructors provide hands-on learning to prepare you for industry demands.</p>
                 </div>
-            </div>
-                <div class="cardhome">
-                    <img class="cardimg" src="./assets/syn4.jpeg" alt="">
-                    <div class="cardtext">
-                        <p class="phead">REPAIR & MAINTENANCE</p>
-                        <p>Keep your equipment and structures in top condition with our reliable welding repairs and maintenance services. We work to extend the lifespan and functionality of your assets.</p>
-                    </div>
-                </div>
-                <div class="cardhome">
-                    <img class="cardimg" src="./assets/syn5.jpeg" alt="">
-                    <div class="cardtext">
-                        <p class="phead">PIPE WELDING</p>
-                        <p>We specialize in welding pipelines with precision to ensure strong, leak-proof joints. From installation to repair, we deliver dependable solutions for all your pipe welding needs.</p>
-                   </div>
-                </div>
-                <div class="cardhome">
-                    <img class="cardimg" src="./assets/syn6.jpeg" alt="">
-                    <div class="cardtext">
-                        <p class="phead">METAL FABRICATION</p>
-                        <p>Our metal fabrication services offer custom solutions for high-quality parts and products. We combine expertise and advanced techniques to meet your unique needs.</p>
-                    </div>
-                </div>
-        </div>
-    </section>  
-    <section id="team">
-        <div id="sub-header">
-            <h1>Our Team</h1>
-        </div>
-        <div id="aspects">
-            <div class="aspectdiv">
-                <img class="cardimge" src="./assets/Fred-Opoku-Agyemang.webp" alt="icon image 1">
+            </article>
+            <article class="service-card" role="listitem">
+                <img class="cardimg" src="./assets/syn4.jpeg" alt="Equipment repair and maintenance" loading="lazy">
                 <div class="cardtext">
+                    <h4 class="phead">REPAIR & MAINTENANCE</h4>
+                    <p>Keep your equipment and structures in top condition with our reliable welding repairs and maintenance services. We work to extend the lifespan and functionality of your assets.</p>
+                </div>
+            </article>
+            <article class="service-card" role="listitem">
+                <img class="cardimg" src="./assets/syn5.jpeg" alt="Pipe welding work" loading="lazy">
+                <div class="cardtext">
+                    <h4 class="phead">PIPE WELDING</h4>
+                    <p>We specialize in welding pipelines with precision to ensure strong, leak-proof joints. From installation to repair, we deliver dependable solutions for all your pipe welding needs.</p>
+                </div>
+            </article>
+            <article class="service-card" role="listitem">
+                <img class="cardimg" src="./assets/syn6.jpeg" alt="Metal fabrication workshop" loading="lazy">
+                <div class="cardtext">
+                    <h4 class="phead">METAL FABRICATION</h4>
+                    <p>Our metal fabrication services offer custom solutions for high-quality parts and products. We combine expertise and advanced techniques to meet your unique needs.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section id="team" class="team-section" aria-label="Our team members">
+        <div class="team-header">
+            <h2>Our Team</h2>
+        </div>
+        <div class="team-grid" role="list">
+            <article class="team-member" role="listitem">
+                <img class="team-photo" src="./assets/Fred-Opoku-Agyemang.webp" alt="Fred-Opoku-Agyemang, Founder" loading="lazy">
+                <div class="team-info">
                     <p class="name">Fred-Opoku-Agyemang</p>
                     <p class="post">Founder</p>
                 </div>
-            </div>
-            <div class="aspectdiv">
-                    <img class="cardimge" src="./assets/Richard-Bonsu.webp" alt="icon image 1">
-                    <div class="cardtext">
+            </article>
+            <article class="team-member" role="listitem">
+                <img class="team-photo" src="./assets/Richard-Bonsu.webp" alt="Richard Bonsu, Field Engineer" loading="lazy">
+                <div class="team-info">
                     <p class="name">Richard Bonsu</p>
                     <p class="post">Field Engineer</p>
-                    </div>
-            </div>
-            <div class="aspectdiv">
-                <img class="cardimge" src="./assets/frimpong.webp" alt="icon image 1">
-                <div class="cardtext">
-                    <p class="name">Frimpong Theophilus</p>
-                    <p class="post">Welding Engineer</p>   
                 </div>
-            </div>
-            <div class="aspectdiv">
-                <img class="cardimge" src="./assets/Appiah.webp" alt="icon image 1">
-                <div class="cardtext">
-                    <p class="name">Baffour Appiah Stephen</p>
+            </article>
+            <article class="team-member" role="listitem">
+                <img class="team-photo" src="./assets/frimpong.webp" alt="Frimpong Theophilus, Welding Engineer" loading="lazy">
+                <div class="team-info">
+                    <p class="name">Frimpong Theophilus</p>
+                    <p class="post">Welding Engineer</p>
+                </div>
+            </article>
+            <article class="team-member" role="listitem">
+                <img class="team-photo" src="./assets/Appiah.webp" alt="Baffour Appiah Stephen, Operations Engineer" loading="lazy">
+                <div class="team-info">
+                    <p class="name">Baffour Appiah Stephen </p>
                     <p class="post">Operations Engineer</p>
                 </div>
-            </div>
-            <div class="aspectdiv">
-                <img class="cardimge" src="./assets/Richmond.webp" alt="icon image 1">
-                <div class="cardtext">
-                    <p class="name">Supervisor</p>
-                    <p class="post">Business Dev. Manager</p>
+            </article>
+            <article class="team-member" role="listitem">
+                <img class="team-photo" src="./assets/Richmond.webp" alt="Richmond, Business Development Manager" loading="lazy">
+                <div class="team-info">
+                    <p class="name">Richmond</p>
+                    <p class="post">Business Development Manager</p>
                 </div>
+        </div>
+    </section>
+    <section id="testimonials" class="testimonials-section" aria-label="Customer testimonials">
+        <div class="testimonials-header">
+            <h2>Testimonials</h2>
+        </div>
+        <div class="swiper mySwiper" role="region" aria-label="Customer testimonials carousel">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <blockquote class="testimonial-content">
+                    <p class="review-text">
+                        I was blown away by the professionalism and quality of work. I needed custom metal gates for my house in Kumasi, and Syntropy delivered beyond my expectations. The team was on time, efficient, and made sure every detail was perfect. My neighbors keep asking for your contact!
+                    </p>
+                    <cite class="testimonial-author">Daniel Owusu</cite>
+                </blockquote>
+              </div>
+              <div class="swiper-slide">
+                <blockquote class="testimonial-content">
+                    <p class="review-text">
+                        I had some rusted pipes that needed urgent welding for my plumbing business in Accra. Syntropy came through quickly and did an excellent job. The welds were strong, and the pricing was fair. Definitely the go-to welding company in Ghana!
+                    </p>
+                    <cite class="testimonial-author">Ama Agyemang</cite>
+                </blockquote>
+              </div>
+              <div class="swiper-slide">
+                <blockquote class="testimonial-content">
+                    <p class="review-text">
+                        The Syntropy team fabricated steel frames for my furniture workshop in Takoradi, and I couldn't be happier. The materials were durable, and their precision made my work easier. Their customer service is also top-notch. I recommend them 100%.
+                    </p>
+                    <cite class="testimonial-author">Kwame Boateng</cite>
+                </blockquote>
+              </div>
+              <div class="swiper-slide">
+                <blockquote class="testimonial-content">
+                    <p class="review-text">
+                        I needed decorative metal railings for my family house in Cape Coast, and Syntropy made it happen. Their designs are unique, and the finishing was flawless. The team is very polite and hardworking—true professionals!
+                    </p>
+                    <cite class="testimonial-author">Akosua Mensah</cite>
+                </blockquote>
+              </div>
+            </div>
+            <div class="swiper-button-next" aria-label="Next testimonial"></div>
+            <div class="swiper-button-prev" aria-label="Previous testimonial"></div>
+            <div class="swiper-pagination" role="tablist" aria-label="Testimonial pagination"></div>
+          </div>
+    </section>
+    <section id="contact" class="contact-section" aria-label="Contact information">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fa fa-phone" aria-hidden="true" aria-label="Phone"></i>
+                        <span class="contact-label">Phone:</span>
+                        <a href="tel:+233267384812" aria-label="Call us at +233 26 738 4812">+233 26 738 4812</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-envelope" aria-hidden="true" aria-label="Email"></i>
+                        <span class="contact-label">Email:</span>
+                        <a href="mailto:dir@syntropyengineeringsolutions.com" aria-label="Email us at dir@syntropyengineeringsolutions.com">dir@syntropyengineeringsolutions.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-map-marker" aria-hidden="true" aria-label="Location"></i>
+                        <span class="contact-label">Location:</span>
+                        <address>Syntropy Engineering Solutions (SES)<br>
+                        Near Garages - Magazine, Kumasi, Ghana</address>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <form class="contact-form" action="#" method="post" novalidate>
+                    <h3>Send us a message</h3>
+                    <div class="form-group">
+                        <label for="name">Name <span aria-hidden="true">*</span></label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email <span aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message <span aria-hidden="true">*</span></label>
+                        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
-    <section id="testimonials">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><br><br>
-                <h1>Testimonials</h1><br>
-                <p class="review-text">
-                    I was blown away by the professionalism and quality of work. I needed custom metal gates for my house in Kumasi, and Syntropy delivered beyond my expectations. The team was on time, efficient, and made sure every detail was perfect. My neighbors keep asking for your contact!
-                </p><br><br>
-                <!-- <img class="images-one" src="./assets/pexels-darkshadephotos-18922740.jpg"><br> -->
-                <p class="magin-para">Daniel Owusu</p>
-              </div>
-              <div class="swiper-slide"><br><br>
-                <h1>Testimonials</h1><br>
-                <p class="review-text">
-                    I had some rusted pipes that needed urgent welding for my plumbing business in Accra. Syntropy came through quickly and did an excellent job. The welds were strong, and the pricing was fair. Definitely the go-to welding company in Ghana!
-                </p><br><br>
-                <!-- <img class="images-one" src="./assets/pexels-akingbola-opeyemi-505464242-29559580.jpg"><br> -->
-                <p class="magin-para">Ama Agyemang</p>
-              </div>
-              <div class="swiper-slide"><br><br>
-                <h1>Testimonials</h1><br>
-                <p class="review-text">
-                    The Syntropy team fabricated steel frames for my furniture workshop in Takoradi, and I couldn't be happier. The materials were durable, and their precision made my work easier. Their customer service is also top-notch. I recommend them 100%.
-                </p><br><br>
-                <!-- <img class="images-one" src="./assets/pexels-darkshadephotos-18922740.jpg"><br> -->
-                <p class="magin-para">Kwame Boateng</p>
-              </div>
-              <div class="swiper-slide"><br><br>
-                <h1>Testimonials</h1><br>
-                <p class="review-text">
-                    I needed decorative metal railings for my family house in Cape Coast, and Syntropy made it happen. Their designs are unique, and the finishing was flawless. The team is very polite and hardworking—true professionals!
-                </p><br><br>
-                <!-- <img class="images-one" src="./assets/pexels-ogproductionz-17243615.jpg"><br> -->
-                <p class="magin-para">Akosua Mensah</p>
-              </div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-          </div>
-    </section>
-    <section id="contact">
-        <span>
-            <p>Contact Us</p>
-                <i class="fa fa-phone" aria-hidden="true"></i>0267384812
-                <i class="fa fa-envelope" aria-hidden="true"></i>dir@syntropyengineeringsolutions.com
-                <i class="fa fa-map-marker" aria-hidden="true"></i>Syntropy Engineering Solutions (SES)
-                Near Garages - Magazine, Kumasi
-        </span>
-      </section>
     <footer>
         <div id="social-icons">
             <a href="https://web.facebook.com/profile.php?id=100083127017109"><i class="fab fa-facebook"></i></a>
@@ -206,6 +284,10 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <!-- Boafo Accessibility Widget - API key should be set via environment variable in production -->
+    <script>
+        window.BOAFO_API_KEY = "boafo_1234"; // Replace with env var in production: window.BOAFO_API_KEY = process.env.NEXT_PUBLIC_BOAFO_API_KEY;
+    </script>
     <script
         src="https://unpkg.com/boafo-accessibility-widget/public/widget.bundle.js"
         data-api-key="boafo_1234"

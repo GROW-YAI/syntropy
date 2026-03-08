@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import React = require("react");
+import React from "react";
 
 export default function Navbar() {
   return (

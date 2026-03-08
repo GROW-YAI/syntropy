@@ -1,0 +1,127 @@
+/* Performance Optimizations for Syntropy Website */
+
+/* Critical CSS - Load immediately */
+:root {
+    --primary-color: #FE5D37;
+    --secondary-color: #0500FC;
+    --text-color: #333;
+    --bg-color: #fff;
+    --accent-color: #222222;
+}
+
+/* Optimize animations and transitions */
+* {
+    will-change: auto;
+}
+
+/* Optimize scrolling performance */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Optimize images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Optimize layout performance */
+.hero-section, .about-section, .services-section, .team-section, .testimonials-section, .contact-section {
+    contain: layout style paint;
+}
+
+/* Optimize CSS animations */
+.service-card, .team-member, .testimonial-content {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Optimize button interactions */
+.get-button, .submit-button {
+    will-change: transform, background-color;
+    transform: translateZ(0);
+}
+
+/* Optimize navigation */
+.fixed-navbar {
+    will-change: background-color;
+    transform: translateZ(0);
+}
+
+/* Optimize Swiper performance */
+.swiper-slide {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Optimize hover effects */
+.service-card:hover, .team-member:hover, .about-image img:hover {
+    will-change: transform;
+}
+
+/* Optimize responsive design */
+@media (max-width: 768px) {
+    .services-grid, .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    
+    .hero-content h2 {
+        font-size: 30px;
+    }
+}
+
+/* Optimize accessibility focus states */
+button:focus, input:focus, textarea:focus, a:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Optimize font loading */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Poppins Bold'), local('Poppins-Bold');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Poppins Regular'), local('Poppins-Regular');
+}
+
+@font-face {
+    font-family: 'Courgette';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Courgette Regular'), local('Courgette-Regular');
+}

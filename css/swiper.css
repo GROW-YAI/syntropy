@@ -1,0 +1,26 @@
+/* Swiper CSS Custom Styles */
+/* Base styles are loaded from CDN in index.html */
+
+.swiper {
+  width: 100%;
+  height: 500px;
+}
+
+.swiper-slide {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #0500FC !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #0500FC !important;
+}
+
