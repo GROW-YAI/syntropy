@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "browser-sync start --server --files '**/*.html, **/*.css, **/*.js'"
+    "dev": "browser-sync start --server --files '**/*.html, **/*.css, **/*.js'",
+    "dv": "browser-sync start --server --files '**/*.html, **/*.css, **/*.js'"
   },
   "dependencies": {
     "boafo-accessibility-widget": "^1.1.8",

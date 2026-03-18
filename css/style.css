@@ -577,6 +577,62 @@ footer {
     margin-bottom: 40px;
 }
 
+/* Dynamic content styles */
+#homepage-title {
+    font-size: 70px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#homepage-description {
+    font-size: 50px;
+    margin-bottom: 40px;
+    color: white;
+    font-family: "Courgette", cursive;
+}
+
+#homepage-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+#homepage-image:hover {
+    transform: scale(1.05);
+}
+
+.services-content {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.services-content p {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #FE5D37;
+}
+
+.contact-content p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
 .about-section {
     display: flex;
     justify-content: center;
@@ -872,10 +928,12 @@ footer {
     color: #263246;
     margin-bottom: 30px;
     font-size: 24px;
+    text-align: left; /* Left align the heading */
 }
 
 .form-group {
     margin-bottom: 20px;
+    text-align: left; /* Left align form groups */
 }
 
 .form-group label {
@@ -883,6 +941,7 @@ footer {
     margin-bottom: 8px;
     font-weight: 600;
     color: #333;
+    text-align: left; /* Left align labels */
 }
 
 .form-group input,
@@ -894,6 +953,7 @@ footer {
     font-size: 16px;
     transition: border-color 0.3s ease;
     box-sizing: border-box;
+    text-align: left; /* Left align input text */
 }
 
 .form-group input:focus,
@@ -905,6 +965,7 @@ footer {
 .form-group textarea {
     resize: vertical;
     min-height: 120px;
+    text-align: left; /* Left align textarea text */
 }
 
 .submit-button {
@@ -918,6 +979,7 @@ footer {
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
+    text-align: left; /* Left align button text */
 }
 
 .submit-button:hover {
