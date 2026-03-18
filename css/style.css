@@ -194,17 +194,17 @@ header {
     height: 25px;
     cursor: pointer;
     z-index: 110;
-  }
+}
   
-  #hamburger-menu .bar {
+#hamburger-menu .bar {
     width: 30px;
     height: 4px;
     background-color: #333;
     border-radius: 5px;
-  }
+}
   
-  /* Show the hamburger menu on mobile */
-  @media (max-width: 768px) {
+/* Show the hamburger menu on mobile */
+@media (max-width: 768px) {
     #nav-links {
       display: none;
       flex-direction: column;
@@ -237,12 +237,12 @@ header {
     .fixed-navbar.scrolled #hamburger-menu .bar {
       background-color: #333;
     }
-  }
+}
   
-  /* Active state for navigation menu */
-  #nav-links.active {
+/* Active state for navigation menu */
+#nav-links.active {
     display: flex;
-  }
+}
 
 #aboutimage {
     width: 500px;
