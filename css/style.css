@@ -270,14 +270,9 @@ header {
     flex-direction: column;
 }
 
-.sub-header span:nth-child(1) {
+.sub-header h2 {
     color: #FE5D37;
-    font-size: 50px;
-}
-
-.sub-header span:nth-child(2) {
-    color: #222222;
-    font-size: 40px;
+    font-size: 40px; /* Changed to match Our Team styling */
 }
 
 .sub-header1 {
