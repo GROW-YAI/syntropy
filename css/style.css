@@ -531,6 +531,12 @@ footer {
     padding: 20px;
     background-color: #001F3F;
     color: #fff;
+    margin: 0;
+    line-height: 1;
+}
+
+footer > br {
+    display: none;
 }
 
 #social-icons a {
