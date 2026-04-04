@@ -176,8 +176,8 @@
                 <article class="team-member" role="listitem">
                     <img class="team-photo" src="./assets/Richmond.webp" alt="Richmond, Business Development Manager" loading="lazy">
                     <div class="team-info">
-                        <p class="name">Richmond</p>
-                        <p class="post">Business Development Manager</p>
+                        <p class="name">Supervisor</p>
+                        <p class="post">Business Dev. Manager</p>
                     </div>
                 </article>
             </div>
@@ -292,13 +292,13 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
-    <!-- Boafo Accessibility Widget - API key should be set via environment variable in production -->
+    
     <script>
-        window.BOAFO_API_KEY = "boafo_1234"; // Replace with env var in production: window.BOAFO_API_KEY = process.env.NEXT_PUBLIC_BOAFO_API_KEY;
+window.BOAFO_API_KEY = process.env.NEXT_PUBLIC_BOAFO_API_KEY;
     </script>
     <script
         src="https://unpkg.com/boafo-accessibility-widget/public/widget.bundle.js"
-        data-api-key="boafo_1234"
+data-api-key="boafo_1234"
         defer
     ></script>
 </body>

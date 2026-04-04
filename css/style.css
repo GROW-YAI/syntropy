@@ -110,7 +110,7 @@ body {
     width: 100%;
     z-index: 100;
     transition: background-color 0.3s ease;
-    background-color: transparent; /* Default transparent background */
+    background-color: transparent;
 }
 
 .fixed-navbar.scrolled {
@@ -142,7 +142,6 @@ a {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    /* Fallback background when image is hidden */
     background-color: #1a1a1a;
 }
 
@@ -170,21 +169,6 @@ header {
     font-size: 70px;
 }
 
-.get-button {
-    background-color: #FE5D37;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    font-size: 20px;
-    border-radius: 5px;
-}
-
-.get-button:hover {
-    color: white;
-    background-color: #0500FC;
-}
-
 /* Hamburger Menu styles */
 #hamburger-menu {
     display: none;
@@ -195,50 +179,14 @@ header {
     cursor: pointer;
     z-index: 110;
 }
-  
+
 #hamburger-menu .bar {
     width: 30px;
     height: 4px;
     background-color: #333;
     border-radius: 5px;
 }
-  
-/* Show the hamburger menu on mobile */
-@media (max-width: 768px) {
-    #nav-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-      padding: 20px;
-      position: absolute;
-      top: 60px; /* Below the navbar */
-      left: 0;
-      background-color: #fff;
-      z-index: 100;
-    }
-  
-    #nav-links a {
-      padding: 10px 0;
-      font-size: 18px;
-      color: #333;
-      text-transform: uppercase;
-      border-bottom: 1px solid #ddd;
-    }
-  
-    #nav-links a:hover {
-      color: #FE5D37;
-    }
-  
-    #hamburger-menu {
-      display: flex;
-    }
-    
-    .fixed-navbar.scrolled #hamburger-menu .bar {
-      background-color: #333;
-    }
-}
-  
+
 /* Active state for navigation menu */
 #nav-links.active {
     display: flex;
@@ -272,7 +220,7 @@ header {
 
 .sub-header h2 {
     color: #FE5D37;
-    font-size: 40px; /* Changed to match Our Team styling */
+    font-size: 40px;
 }
 
 .sub-header1 {
@@ -314,9 +262,9 @@ header {
 #blogcards {
     padding: 40px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three cards per row */
-    gap: 80px; /* Space between cards */
-    justify-items: center; /* Center cards horizontally */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    justify-items: center;
 }
 
 .cardhome {
@@ -362,12 +310,14 @@ header {
     color: #FE5D37;
     font-size: 40px;
 }
+
 #team {
     background-color: white;
     width: 100%;
     height: 100vh;
     padding-top: 50px;
-  }
+}
+
 #aspects {
     background-color: #F8F8F8;
     width: 100%;
@@ -377,49 +327,66 @@ header {
     align-items: center;
     gap: 5px;
     padding-top: 50px;
-  }
-  .aspectdiv {
+}
+
+.aspectdiv {
     background-color: white;
     text-align: center;
     width: 250px;
     height: 90%;
     border-radius: 5px;
-  }
+}
 
-  .cardimge {
+.cardimge {
     width: 100%;
     height: 80%;
-  }
+}
 
-.name{
-    color: black;
-    display: block;
-    font-family: "DM Sans", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    height: 24px;
+/* ── TEAM CARD STYLES ── */
+.name {
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    color: #111111 !important;
+    line-height: 1.4;
+    height: auto;
+    margin: 0;
     text-align: center;
-    margin-top: 5px;
+    font-family: "Montserrat", sans-serif;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    display: block;
 }
-.post{
-    color: #fc0606;
+
+.post {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #fc0606 !important;
+    margin: 0;
+    text-align: center;
+    background: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    display: block;
 }
- 
+
 #sub-header img {
-  width: 150px;
-  margin-bottom: -25px;
+    width: 150px;
+    margin-bottom: -25px;
 }
+
 #sub-header {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
 }
+
 #p-one1 {
-  color: rgb(38, 50, 70);
-  font-family: "DM Sans", sans-serif;
-  font-size: 44px;
-  font-weight: 400;
-  padding-bottom: 15px;
+    color: rgb(38, 50, 70);
+    font-family: "DM Sans", sans-serif;
+    font-size: 44px;
+    font-weight: 400;
+    padding-bottom: 15px;
 }
 
 #testimonials {
@@ -491,7 +458,6 @@ header {
     background-color: #FE5D37 !important;
 }
 
-
 #contact {
     display: flex;
     justify-content: center;
@@ -549,7 +515,7 @@ footer > br {
     transform: rotateY(180deg);
 }
 
-/* New semantic section styles */
+/* ── HERO ── */
 .hero-section {
     position: relative;
     width: 100%;
@@ -578,7 +544,6 @@ footer > br {
     margin-bottom: 40px;
 }
 
-/* Dynamic content styles */
 #homepage-title {
     font-size: 70px;
     margin-bottom: 20px;
@@ -634,6 +599,7 @@ footer > br {
     margin: 0;
 }
 
+/* ── ABOUT ── */
 .about-section {
     display: flex;
     justify-content: center;
@@ -667,6 +633,7 @@ footer > br {
     transform: scale(1.05);
 }
 
+/* ── SERVICES SECTION ── */
 .services-section {
     background-color: white;
     width: 100%;
@@ -741,6 +708,7 @@ footer > br {
     line-height: 1.6;
 }
 
+/* ── TEAM SECTION ── */
 .team-section {
     background-color: white;
     width: 100%;
@@ -767,52 +735,58 @@ footer > br {
 }
 
 .team-member {
-    background: #F8F8F8;
-    border-radius: 12px;
-    padding: 20px;
+    background: white;
+    border-radius: 0;
+    border: none;
+    overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease;
-    min-height: 350px;
+    padding: 0;
 }
 
 .team-member:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
 
 .team-photo {
     width: 100%;
-    height: 280px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    border-radius: 0;
+    margin-bottom: 0;
+    display: block;
     transition: transform 0.3s ease;
 }
 
 .team-member:hover .team-photo {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .team-info {
+    padding: 12px 8px 6px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
+    background: white;
+}
+
+/* Neutralise the generic .team-info p rule so .post colour wins */
+.team-info p {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
 }
 
 .team-info h3 {
-    color: black;
-    font-size: 22px;
+    color: #111111;
+    font-size: 17px;
     margin: 0;
-    font-weight: 600;
+    font-weight: 700;
 }
 
-.team-info p {
-    color: #FE5D37;
-    font-weight: 500;
-    font-size: 16px;
-    margin: 0;
-}
-
+/* ── TESTIMONIALS ── */
 .testimonials-section {
     width: 100%;
     background-color: #F5F6FA;
@@ -853,6 +827,7 @@ footer > br {
     font-style: normal;
 }
 
+/* ── CONTACT ── */
 .contact-section {
     background-color: #001F3F;
     color: #fff;
@@ -929,12 +904,12 @@ footer > br {
     color: #263246;
     margin-bottom: 30px;
     font-size: 24px;
-    text-align: left; /* Left align the heading */
+    text-align: left;
 }
 
 .form-group {
     margin-bottom: 20px;
-    text-align: left; /* Left align form groups */
+    text-align: left;
 }
 
 .form-group label {
@@ -942,7 +917,7 @@ footer > br {
     margin-bottom: 8px;
     font-weight: 600;
     color: #333;
-    text-align: left; /* Left align labels */
+    text-align: left;
 }
 
 .form-group input,
@@ -954,7 +929,7 @@ footer > br {
     font-size: 16px;
     transition: border-color 0.3s ease;
     box-sizing: border-box;
-    text-align: left; /* Left align input text */
+    text-align: left;
 }
 
 .form-group input:focus,
@@ -966,7 +941,7 @@ footer > br {
 .form-group textarea {
     resize: vertical;
     min-height: 120px;
-    text-align: left; /* Left align textarea text */
+    text-align: left;
 }
 
 .submit-button {
@@ -980,7 +955,7 @@ footer > br {
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
-    text-align: left; /* Left align button text */
+    text-align: left;
 }
 
 .submit-button:hover {
@@ -993,227 +968,236 @@ footer > br {
     outline-offset: 2px;
 }
 
-/* Responsive adjustments */
+/* ── RESPONSIVE: TABLET ── */
 @media (max-width: 1024px) {
-    body{
+    body {
         overflow-x: hidden;
     }
     .fixed-navbar {
         padding: 10px 30px;
     }
     #subtext1 {
-        font-size: 40px; /* Slightly smaller text size on tablets */
+        font-size: 40px;
     }
-
     #subtext2 {
-        font-size: 60px; /* Adjust text size for tablets */
+        font-size: 60px;
     }
-
     .get-button {
-        font-size: 18px; /* Slightly smaller font size for buttons */
-        padding: 8px 16px; /* Adjust padding for tablets */
+        font-size: 18px;
+        padding: 8px 16px;
     }
     #nav-links {
         column-gap: 20px;
     }
-   
     #home #hero-overlay {
         padding: 20px;
     }
-
     .sub-header span:nth-child(1), .sub-header span:nth-child(2) {
         font-size: 30px;
     }
-
     .aboutdescription {
         font-size: 16px;
         line-height: 20px;
     }
-
     .cardhome {
         width: 80%;
     }
-
     #blogcards {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
-
     #services {
         padding: 50px 20px;
     }
-
     .swiper {
-        height: 400px; /* Adjust height for tablets */
+        height: 400px;
     }
-
     .swiper-slide h1 {
-        font-size: 30px; /* Smaller text size on tablets */
+        font-size: 30px;
     }
-
     .review-text {
-        font-size: 28px; /* Adjust font size for better readability */
-        max-width: 80%; /* Increase max-width for tablets */
+        font-size: 28px;
+        max-width: 80%;
     }
-
     .magin-para {
-        font-size: 18px; /* Slightly smaller font size */
+        font-size: 18px;
     }
     #team {
-        height: auto; /* Adjust the height on smaller screens */
+        height: auto;
     }
-
     #aspects {
-        height: auto; /* Adjust the height for better flexibility */
-        flex-direction: row; /* Stack items vertically on smaller screens */
-        gap: 20px; /* Increase gap for better spacing */
+        height: auto;
+        flex-direction: row;
+        gap: 20px;
     }
-
     .aspectdiv {
-        width: 80%; /* Make each aspect div occupy 80% of the width */
-        height: auto; /* Adjust height to content */
-        padding: 20px; /* Add some padding for mobile screens */
+        width: 80%;
+        height: auto;
+        padding: 20px;
     }
-
     .name {
-        font-size: 18px; /* Slightly smaller text size for mobile */
+        font-size: 15px !important;
+        color: #111111 !important;
+        font-weight: 700 !important;
     }
-
+    .post {
+        font-size: 13px !important;
+        color: #fc0606 !important;
+    }
     .cardimge {
-        height: auto; /* Adjust height to fit better on mobile */
+        height: auto;
+    }
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
+/* ── RESPONSIVE: MOBILE ── */
 @media (max-width: 768px) {
-    body{
+    body {
         overflow-x: hidden;
     }
     .fixed-navbar {
         padding: 10px 20px;
     }
-
-    /* #nav-links {
+    #nav-links {
         display: none;
-    } */
-    #home {
-        background-position: center center; /* Center the background on mobile */
-        height: 80vh; /* Adjust height for mobile to avoid excessive scrolling */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        z-index: 100;
     }
-
+    #nav-links a {
+        padding: 10px 0;
+        font-size: 18px;
+        color: #333;
+        text-transform: uppercase;
+        border-bottom: 1px solid #ddd;
+    }
+    #nav-links a:hover {
+        color: #FE5D37;
+    }
+    #hamburger-menu {
+        display: flex;
+    }
+    .fixed-navbar.scrolled #hamburger-menu .bar {
+        background-color: #333;
+    }
+    #home {
+        background-position: center center;
+        height: 80vh;
+    }
     .fixed-navbar.scrolled {
         background-color: rgba(255, 255, 255, 1);
     }
-
     .fixed-navbar.scrolled a {
         color: black;
     }
     #subtext1 {
-        font-size: 30px; /* Smaller font size on mobile */
+        font-size: 30px;
     }
-
     #subtext2 {
-        font-size: 50px; /* Smaller font size on mobile */
+        font-size: 50px;
     }
-
     .get-button {
-        font-size: 16px; /* Adjust button font size for mobile */
-        padding: 6px 12px; /* Adjust padding for mobile */
+        font-size: 16px;
+        padding: 6px 12px;
     }
-
     #hero-overlay {
-        height: 100vh; /* Keep overlay full-height on mobile */
-        padding: 0 10px; /* Add padding to prevent text from hitting edges */
+        height: 100vh;
+        padding: 0 10px;
     }
     .cardhome {
         width: 100%;
     }
-
     #about {
         flex-direction: column;
         align-items: center;
         padding: 50px;
     }
-
     #aboutimage {
         width: 100%;
         height: auto;
-        max-width: 500px; /* Prevents image from becoming too large */
-        /* transition: transform 0.6s ease; */
+        max-width: 500px;
         padding-bottom: 5px;
     }
     #services {
         padding: 30px 10px;
     }
-
     #blogcards {
         grid-template-columns: 1fr;
     }
-
     .swiper {
-        height: 350px; /* Adjust height for mobile devices */
+        height: 350px;
     }
-
     .swiper-slide h1 {
-        font-size: 24px; /* Smaller font size for mobile */
+        font-size: 24px;
     }
-
     .review-text {
-        font-size: 22px; /* Adjust text size for mobile */
-        max-width: 90%; /* Increase width to accommodate on small screens */
+        font-size: 22px;
+        max-width: 90%;
     }
-
     .magin-para {
-        font-size: 16px; /* Adjust font size for mobile */
+        font-size: 16px;
     }
-
     .swiper-button-next, .swiper-button-prev {
-        font-size: 18px; /* Smaller button sizes on mobile */
+        font-size: 18px;
     }
     #team {
-        height: auto; /* Ensure the team section adapts to mobile screens */
-        padding-top: 30px; /* Reduce padding for smaller screens */
+        height: auto;
+        padding-top: 30px;
     }
-
     #aspects {
         height: auto;
-        padding-top: 30px; /* Adjust padding on mobile */
-        flex-direction: column; /* Stack elements vertically */
-        gap: 20px; /* Adjust spacing */
+        padding-top: 30px;
+        flex-direction: column;
+        gap: 20px;
     }
-
     .aspectdiv {
-        width: 100%; /* Each aspect div takes up full width */
+        width: 100%;
         height: auto;
-        padding: 15px; /* Adjust padding on mobile */
+        padding: 15px;
     }
-
     .name {
-        font-size: 16px; /* Further reduce text size on smaller devices */
+        font-size: 14px !important;
+        color: #111111 !important;
+        font-weight: 700 !important;
     }
-
+    .post {
+        font-size: 12px !important;
+        color: #fc0606 !important;
+    }
     .cardimge {
-        height: auto; /* Ensure images scale properly */
+        height: auto;
+    }
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .team-photo {
+        height: 180px;
     }
     #contact {
-        padding: 10px; /* Reduces padding for smaller screens */
-      /* Adjusts bottom margin */
-      }
-      #contact span {
-        flex-direction: column; /* Stacks items vertically on mobile */
-        gap: 10px; /* Reduces gap between items */
-        text-align: center; /* Centers text */
-      }
-    
-      #contact i {
-        font-size: 18px; /* Smaller icons on mobile */
-        margin-right: 5px; /* Reduces margin between icons and text */
-      }
-    
-      #contact p {
-        font-size: 16px; /* Smaller text size on mobile */
-      }
+        padding: 10px;
+    }
+    #contact span {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    #contact i {
+        font-size: 18px;
+        margin-right: 5px;
+    }
+    #contact p {
+        font-size: 16px;
+    }
     footer {
         padding: 10px;
     }
-   
 }
